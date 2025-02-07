@@ -26,10 +26,12 @@ function BuildPage() {
 
    return (
       <div className="min-h-screen w-full p-12 ">
-         <div className="max-w-7xl m-auto relative">
-            <Link href={"/"} className="absolute text-white border-white border-[1px] px-4 py-1 rounded-md transition duration-300 ease-in-out  hover:scale-105 hover:shadow-lg">👈 Ir Atras</Link>
-            <h2 className="text-3xl font-bold mb-16 text-center bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent ">Llena el formulario</h2>
-            <form onSubmit={HandleSubmit} className=" grid  md:grid-cols-2 gap-4 text-white">
+         <div className="max-w-7xl m-auto relative flex flex-col   gap-4">
+            <div className="md:absolute ">
+               <Link href={"/"} className="   text-white border-white border-[1px] px-4 py-1 rounded-md transition duration-300 ease-in-out  hover:scale-105 hover:shadow-lg">👈 Ir Atras</Link>
+            </div>
+            <h2 className="flex-1 text-3xl font-bold mb-16 text-center bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent ">Llena el formulario</h2>
+            <form onSubmit={HandleSubmit} className=" grid grid-cols-1  md:grid-cols-2 gap-4 text-white">
                <input type="text" name="computerType" placeholder="Tipo de computadora" className="border border-gray-600  p-2 rounded-md bg-[#121212]" />
                <input type="text" name="processor" placeholder="Procesador" className="border border-gray-600 p-2 w-full h-full rounded-md bg-[#121212]" />
                <input type="text" name="memory" placeholder="Memoria RAM" className="border border-gray-600 p-2 w-full rounded-md bg-[#121212]" />
@@ -48,7 +50,7 @@ function BuildPage() {
                <textarea name="recomendation" placeholder="Recomendaciones" className="border border-gray-600 p-2 w-full h-24 rounded-md bg-[#121212]"></textarea>
                <textarea name="observation" placeholder="Observaciones" className="border border-gray-600 p-2 w-full h-24 rounded-md bg-[#121212]"></textarea>
 
-               <button type="submit" className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 col-span-2 py-4 text-lg font-bold rounded-lg text-gray-300 transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
+               <button type="submit" className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 md:col-span-2 py-4 text-lg font-bold rounded-lg text-gray-300 transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
                   Generar Ficha Tecnica
                </button>
             </form>
